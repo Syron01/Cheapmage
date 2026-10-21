@@ -1,0 +1,2 @@
+# Model weights directory
+# Run `python tools/build_package.py` to fetch and quantize the lightweight weights locally.

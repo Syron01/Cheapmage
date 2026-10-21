@@ -1,0 +1,390 @@
+{
+  "benchmark": "consistency",
+  "status": "measured",
+  "command": "python -m cheapmage.bench.bench_consistency --character \"a cheerful young woman with short silver hair and blue eyes\" --poses 10 --out reports\\consistency.json",
+  "generated_at": "2026-10-22T00:24:20+0300",
+  "character": "a cheerful young woman with short silver hair and blue eyes",
+  "poses": 10,
+  "seed": -1,
+  "style_preset": "auto",
+  "similarity_backend": {
+    "resnet18_weights_cached": null,
+    "backend": "descriptor-fallback",
+    "backend_detail": "HSV colour histogram (32x8, value-weighted) + edge orientation histogram (9 bins, magnitude-weighted) + 16x16 luminance structure",
+    "backend_weights_path": null
+  },
+  "similarity_score_range": "cosine similarity, -1.0 .. 1.0",
+  "pairwise": {
+    "count": 45,
+    "mean": 0.357632,
+    "min": 0.201961,
+    "max": 0.539765,
+    "p05": 0.255599,
+    "median": 0.363944,
+    "stdev": 0.067383,
+    "to_centroid": {
+      "mean": 0.649514,
+      "min": 0.545849,
+      "values": [
+        0.673788,
+        0.713345,
+        0.643302,
+        0.700271,
+        0.617807,
+        0.545849,
+        0.633235,
+        0.604424,
+        0.656342,
+        0.706781
+      ]
+    }
+  },
+  "threshold": 0.75,
+  "pass": false,
+  "latency_seconds": {
+    "avg": 3.493237,
+    "median": 1.968785,
+    "p95": 10.258979,
+    "min": 1.822385,
+    "max": 15.69998,
+    "n": 10,
+    "p50": 1.968785,
+    "p99": 14.61178,
+    "stdev": 4.099741,
+    "total": 34.932372
+  },
+  "images": [
+    {
+      "index": 0,
+      "pose": "front",
+      "pose_text": "standing facing the camera, front view, neutral pose, arms at sides",
+      "prompt": "a cheerful young woman with short silver hair and blue eyes, standing facing the camera, front view, neutral pose, arms at sides",
+      "duration_seconds": 15.7,
+      "image": "reports\\consistency\\00_front.png",
+      "seed": 98686017
+    },
+    {
+      "index": 1,
+      "pose": "three_quarter",
+      "pose_text": "three-quarter view, standing, slight turn of the torso",
+      "prompt": "a cheerful young woman with short silver hair and blue eyes, three-quarter view, standing, slight turn of the torso",
+      "duration_seconds": 1.8818,
+      "image": "reports\\consistency\\01_three_quarter.png",
+      "seed": 788540918
+    },
+    {
+      "index": 2,
+      "pose": "side",
+      "pose_text": "full side profile view, standing straight",
+      "prompt": "a cheerful young woman with short silver hair and blue eyes, full side profile view, standing straight",
+      "duration_seconds": 1.971,
+      "image": "reports\\consistency\\02_side.png",
+      "seed": 631124017
+    },
+    {
+      "index": 3,
+      "pose": "back",
+      "pose_text": "seen from behind, back view, standing",
+      "prompt": "a cheerful young woman with short silver hair and blue eyes, seen from behind, back view, standing",
+      "duration_seconds": 2.1656,
+      "image": "reports\\consistency\\03_back.png",
+      "seed": 1059291968
+    },
+    {
+      "index": 4,
+      "pose": "walking",
+      "pose_text": "walking towards the camera, mid-stride",
+      "prompt": "a cheerful young woman with short silver hair and blue eyes, walking towards the camera, mid-stride",
+      "duration_seconds": 3.6089,
+      "image": "reports\\consistency\\04_walking.png",
+      "seed": 672852504
+    },
+    {
+      "index": 5,
+      "pose": "sitting",
+      "pose_text": "sitting on a simple chair, relaxed posture",
+      "prompt": "a cheerful young woman with short silver hair and blue eyes, sitting on a simple chair, relaxed posture",
+      "duration_seconds": 1.8224,
+      "image": "reports\\consistency\\05_sitting.png",
+      "seed": 1537125391
+    },
+    {
+      "index": 6,
+      "pose": "waving",
+      "pose_text": "waving with one hand, friendly gesture",
+      "prompt": "a cheerful young woman with short silver hair and blue eyes, waving with one hand, friendly gesture",
+      "duration_seconds": 1.9666,
+      "image": "reports\\consistency\\06_waving.png",
+      "seed": 1207021713
+    },
+    {
+      "index": 7,
+      "pose": "arms_up",
+      "pose_text": "arms raised above the head, stretching",
+      "prompt": "a cheerful young woman with short silver hair and blue eyes, arms raised above the head, stretching",
+      "duration_seconds": 1.9085,
+      "image": "reports\\consistency\\07_arms_up.png",
+      "seed": 898715626
+    },
+    {
+      "index": 8,
+      "pose": "close_up",
+      "pose_text": "close-up portrait of the face and shoulders, looking at the camera",
+      "prompt": "a cheerful young woman with short silver hair and blue eyes, close-up portrait of the face and shoulders, looking at the camera",
+      "duration_seconds": 1.8802,
+      "image": "reports\\consistency\\08_close_up.png",
+      "seed": 108962597
+    },
+    {
+      "index": 9,
+      "pose": "action",
+      "pose_text": "dynamic action pose, running, hair and clothes moving",
+      "prompt": "a cheerful young woman with short silver hair and blue eyes, dynamic action pose, running, hair and clothes moving",
+      "duration_seconds": 2.0275,
+      "image": "reports\\consistency\\09_action.png",
+      "seed": 259538991
+    }
+  ],
+  "pairs": [
+    {
+      "a": "front",
+      "b": "three_quarter",
+      "similarity": 0.433921
+    },
+    {
+      "a": "front",
+      "b": "side",
+      "similarity": 0.30485
+    },
+    {
+      "a": "front",
+      "b": "back",
+      "similarity": 0.396308
+    },
+    {
+      "a": "front",
+      "b": "walking",
+      "similarity": 0.395954
+    },
+    {
+      "a": "front",
+      "b": "sitting",
+      "similarity": 0.286273
+    },
+    {
+      "a": "front",
+      "b": "waving",
+      "similarity": 0.374216
+    },
+    {
+      "a": "front",
+      "b": "arms_up",
+      "similarity": 0.374959
+    },
+    {
+      "a": "front",
+      "b": "close_up",
+      "similarity": 0.380837
+    },
+    {
+      "a": "front",
+      "b": "action",
+      "similarity": 0.429031
+    },
+    {
+      "a": "three_quarter",
+      "b": "side",
+      "similarity": 0.367353
+    },
+    {
+      "a": "three_quarter",
+      "b": "back",
+      "similarity": 0.428344
+    },
+    {
+      "a": "three_quarter",
+      "b": "walking",
+      "similarity": 0.36989
+    },
+    {
+      "a": "three_quarter",
+      "b": "sitting",
+      "similarity": 0.282034
+    },
+    {
+      "a": "three_quarter",
+      "b": "waving",
+      "similarity": 0.445041
+    },
+    {
+      "a": "three_quarter",
+      "b": "arms_up",
+      "similarity": 0.354497
+    },
+    {
+      "a": "three_quarter",
+      "b": "close_up",
+      "similarity": 0.412435
+    },
+    {
+      "a": "three_quarter",
+      "b": "action",
+      "similarity": 0.539765
+    },
+    {
+      "a": "side",
+      "b": "back",
+      "similarity": 0.352595
+    },
+    {
+      "a": "side",
+      "b": "walking",
+      "similarity": 0.328359
+    },
+    {
+      "a": "side",
+      "b": "sitting",
+      "similarity": 0.342413
+    },
+    {
+      "a": "side",
+      "b": "waving",
+      "similarity": 0.363944
+    },
+    {
+      "a": "side",
+      "b": "arms_up",
+      "similarity": 0.32806
+    },
+    {
+      "a": "side",
+      "b": "close_up",
+      "similarity": 0.368916
+    },
+    {
+      "a": "side",
+      "b": "action",
+      "similarity": 0.42185
+    },
+    {
+      "a": "back",
+      "b": "walking",
+      "similarity": 0.33181
+    },
+    {
+      "a": "back",
+      "b": "sitting",
+      "similarity": 0.426648
+    },
+    {
+      "a": "back",
+      "b": "waving",
+      "similarity": 0.381209
+    },
+    {
+      "a": "back",
+      "b": "arms_up",
+      "similarity": 0.37542
+    },
+    {
+      "a": "back",
+      "b": "close_up",
+      "similarity": 0.407197
+    },
+    {
+      "a": "back",
+      "b": "action",
+      "similarity": 0.448831
+    },
+    {
+      "a": "walking",
+      "b": "sitting",
+      "similarity": 0.204037
+    },
+    {
+      "a": "walking",
+      "b": "waving",
+      "similarity": 0.25442
+    },
+    {
+      "a": "walking",
+      "b": "arms_up",
+      "similarity": 0.347207
+    },
+    {
+      "a": "walking",
+      "b": "close_up",
+      "similarity": 0.341611
+    },
+    {
+      "a": "walking",
+      "b": "action",
+      "similarity": 0.439455
+    },
+    {
+      "a": "sitting",
+      "b": "waving",
+      "similarity": 0.268049
+    },
+    {
+      "a": "sitting",
+      "b": "arms_up",
+      "similarity": 0.201961
+    },
+    {
+      "a": "sitting",
+      "b": "close_up",
+      "similarity": 0.273636
+    },
+    {
+      "a": "sitting",
+      "b": "action",
+      "similarity": 0.260317
+    },
+    {
+      "a": "waving",
+      "b": "arms_up",
+      "similarity": 0.347555
+    },
+    {
+      "a": "waving",
+      "b": "close_up",
+      "similarity": 0.354345
+    },
+    {
+      "a": "waving",
+      "b": "action",
+      "similarity": 0.324177
+    },
+    {
+      "a": "arms_up",
+      "b": "close_up",
+      "similarity": 0.296501
+    },
+    {
+      "a": "arms_up",
+      "b": "action",
+      "similarity": 0.299661
+    },
+    {
+      "a": "close_up",
+      "b": "action",
+      "similarity": 0.427558
+    }
+  ],
+  "environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26340-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "peak_ram_source": "win32:GetProcessMemoryInfo.PeakWorkingSetSize",
+    "torch": "2.11.0+cu128",
+    "cuda_version": "12.8",
+    "pillow": "12.3.0",
+    "numpy": "2.5.2",
+    "diffusers": "0.41.0",
+    "transformers": "5.17.0"
+  }
+}

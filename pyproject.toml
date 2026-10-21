@@ -1,0 +1,32 @@
+[project]
+name = "cheapmage"
+version = "0.1.0"
+description = "CheapMage: small, fast, cheap anime/3D character image generator"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.3",
+    "diffusers>=0.30",
+    "transformers>=4.40",
+    "accelerate>=0.30",
+    "safetensors>=0.4",
+    "pillow>=10",
+    "numpy>=1.26",
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+    "pydantic>=2.6",
+    "pydantic-settings>=2.2",
+    "pyyaml>=6.0",
+    "huggingface-hub>=0.24",
+    "peft>=0.11",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.23", "httpx>=0.27"]
+onnx = ["onnxruntime>=1.18"]
+
+[tool.setuptools.packages.find]
+include = ["cheapmage*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]

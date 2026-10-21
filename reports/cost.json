@@ -1,0 +1,44 @@
+{
+  "benchmark": "cost",
+  "status": "measured",
+  "generated_at": "2026-10-22T00:24:29+0300",
+  "wall_time_source": "measured (reports\\speed.json, avg of 100 requests)",
+  "wall_time_seconds": 1.97189,
+  "target_per_image_try": 0.01,
+  "market_price_tl_per_image": 0.5,
+  "rows": [
+    {
+      "device": "cuda",
+      "seconds": 1.9719,
+      "hourly_tl": 0.0,
+      "utilisation": 1.0,
+      "tl_per_image": 0.000164,
+      "detail": "local gpu, 120W -> 0.066 kWh x 2.50 TL/kWh",
+      "vs_market": 3048.8
+    },
+    {
+      "device": "cpu",
+      "seconds": 1.9719,
+      "hourly_tl": 0.0,
+      "utilisation": 0.0,
+      "tl_per_image": 2.5e-05,
+      "detail": "local cpu, electricity only",
+      "vs_market": 20000.0
+    }
+  ],
+  "break_even": {
+    "cloud_seconds_per_image_at_target": 22.857,
+    "local_electricity_seconds_per_image_at_target": 120.0,
+    "images_per_hour_at_target": 157.5,
+    "formula_cloud": "cost = gpu_hourly_tl * (seconds / 3600) * utilisation",
+    "formula_local": "cost = (watts / 1000) * (seconds / 3600) * tl_per_kwh"
+  },
+  "config": {
+    "gpu_hourly_tl": 4.5,
+    "local_gpu_hourly_tl": 0.0,
+    "electricity_kwh_price": 2.5,
+    "gpu_power_watts": 120,
+    "cloud_utilization": 0.35
+  },
+  "speed_report": "reports\\speed.json"
+}

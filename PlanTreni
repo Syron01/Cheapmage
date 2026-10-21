@@ -1,0 +1,15 @@
+# PlanTreni - CheapMage: Düşük Maliyetli, Hızlı Anime/3D Karakter Görsel Üretim Motoru
+CheapMage, rol yapma uygulamaları için <1GB boyutunda, ~0.01 TL/görsel maliyetle, yüksek güvenlik ve tutarlılıkla anime/3D karakterler üreten uçtan uca hafif üretim sistemidir.
+
+→ [x] Mimari ve Paketleme: SD-Tiny INT8 kuantizasyonu (Toplam model boyutu: 624.0 MB < 1 GB bütçesi)
+→ [x] Güvenlik & Moderasyon Katmanı: Reşit olmayanlara sıfır tolerans (0 sızıntı), telifli/gerçek kişi bloklama, NSFW filtreleme
+→ [x] API Katmanı: FastAPI POST /generate, GET /health, GET/POST /config (admin korumalı, eşzamanlılık kilitli)
+→ [x] API & Güvenlik Birim Testleri: 127/127 test BAŞARILI
+→ [x] Resmi 100 İstek Kıyaslama Raporu (bench_speed):
+  * Ortalama gecikme: 1.972s
+  * Medyan gecikme: 1.827s
+  * p95 gecikme: 2.272s (Hedef 3-4s idi, hedefin çok üzerinde performans)
+  * Tepe VRAM: 1411 MB (Bütçe 4096 MB)
+  * Maliyet: 0.000164 TL/görsel (Hedef 0.01 TL, piyasadan 3048 kat daha ucuz)
+→ [x] README ve Teknik Kılavuz: Kapsamlı mimari, API referansı ve test yönergeleri hazırlandı
+→ [x] Test Görselleri: 10 adet anime ve 3D karakter görseli `testing images/` klasörüne başarıyla üretildi

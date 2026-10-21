@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Model weights & large binary checkpoints (stored separately / via HuggingFace)
+models/*
+!models/.gitkeep
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+.cache/
+
+# Synthetic training datasets & caches
+data/*
+!data/.gitkeep
+
+# Environments
+.venv/
+venv/
+env/
+ENV/
+
+# System / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-10-22T00:24:52+0300",
+  "steps": [
+    {
+      "step": "speed",
+      "command": "C:\\Users\\theay\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -m cheapmage.bench.bench_speed --requests 100 --warmup 2 --out reports\\speed.json",
+      "exit_code": 0,
+      "seconds": 214.8
+    },
+    {
+      "step": "consistency",
+      "command": "C:\\Users\\theay\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -m cheapmage.bench.bench_consistency --character a cheerful young woman with short silver hair and blue eyes --poses 10 --out reports\\consistency.json",
+      "exit_code": 1,
+      "seconds": 38.25
+    },
+    {
+      "step": "moderation",
+      "command": "C:\\Users\\theay\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -m cheapmage.bench.bench_moderation --out reports\\moderation.json",
+      "exit_code": 0,
+      "seconds": 7.57
+    },
+    {
+      "step": "cost",
+      "command": "C:\\Users\\theay\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -m cheapmage.bench.bench_cost --out reports\\cost.json",
+      "exit_code": 0,
+      "seconds": 0.23
+    },
+    {
+      "step": "human_eval",
+      "command": "C:\\Users\\theay\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -m cheapmage.bench.bench_human_eval --count 30 --out reports\\human_eval.json",
+      "exit_code": 1,
+      "seconds": 23.36
+    }
+  ],
+  "reports": {
+    "speed": "measured",
+    "consistency": "measured",
+    "moderation": "measured",
+    "cost": "measured",
+    "human_eval": "missing"
+  }
+}

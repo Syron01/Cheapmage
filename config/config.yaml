@@ -1,0 +1,74 @@
+# CheapMage - default configuration
+# All runtime knobs live here. `nsfw_mode` may ONLY be changed here (or via the
+# authorized admin API), never by prompt text.
+
+hardware:
+  device: auto              # auto | cpu | cuda | mps
+  max_vram_mb: 4096
+  max_ram_mb: 2048
+  model_offload: true
+  dtype: int8               # int8 | fp16 | fp32
+
+generation:
+  prompt: "a cheerful young woman with short silver hair, blue eyes, wearing a yellow raincoat, full body, clean background"
+  negative_prompt: "lowres, blurry, jpeg artifacts, watermark, signature, text, extra fingers, malformed hands, fused fingers, mutated hands, deformed face, cross-eyed, asymmetric eyes, plastic skin, waxy skin, airbrushed, oversmoothed, flat lighting, inconsistent lighting, cluttered background, duplicate character, extra limbs, extra head, cropped head, low contrast, muddy colors, oversaturated, duplicate, out of frame"
+  style_preset: auto        # anime | 3d | auto
+  width: 512
+  height: 512
+  aspect_ratio: "1:1"       # 1:1 | 2:3 | 3:2 | 9:16 | 16:9
+  steps: 20
+  cfg_scale: 6.0
+  sampler: lcm              # euler_a | dpm++_2m | lcm
+  seed: -1
+  batch_size: 1
+  output_format: webp       # png | webp
+  quality_preset: balanced  # fast | balanced | quality
+
+consistency:
+  seed_lock: true
+  reference_image: null
+  reference_strength: 0.5
+  character_embedding: null
+
+quality_presets:
+  fast:
+    steps: 8
+    cfg_scale: 5.0
+    sampler: lcm
+    vae_tiling: true
+  balanced:
+    steps: 20
+    cfg_scale: 6.0
+    sampler: lcm
+    vae_tiling: false
+  quality:
+    steps: 30
+    cfg_scale: 7.0
+    sampler: dpm++_2m
+    vae_tiling: false
+
+cost:
+  target_per_image_try: 0.01
+  log_cost_per_request: true
+  gpu_hourly_tl: 4.50       # cloud RTX-class GPU hourly price in TRY
+  local_gpu_hourly_tl: 0.0  # local hardware electricity cost in TRY (0 = amortized free)
+  electricity_kwh_price: 2.5
+  gpu_power_watts: 120
+  cloud_utilization: 0.35   # assumed utilization factor for a shared cloud GPU
+
+safety:
+  nsfw_mode: "off"         # off | on  (admin only)
+  nsfw_requires_age_verification: true
+  nsfw_allowed_for: "age-verified adult users only"
+  moderation_layer: true
+  real_person_likeness: block
+  copyrighted_characters: block
+  blocked_response: "Request blocked by the content safety policy. The generated image was not returned."
+
+api:
+  host: "127.0.0.1"
+  port: 8000
+  timeout_seconds: 20
+  max_concurrency: 2
+  admin_token: "change-me"
+  expose_config: true
